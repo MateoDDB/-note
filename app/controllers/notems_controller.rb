@@ -1,6 +1,6 @@
 class NotemsController < ApplicationController
   def index
-    @notems = Notem.all
+    @notems = Notem.order(created_at: :desc)
   end
 
   def show
