@@ -1,0 +1,37 @@
+.card {
+  padding: 10px;
+  margin: 10px 10px;
+  border-radius: 4px;
+  h2 {
+    font-size: 24px;
+    color: $blue-hard;
+  }
+  h3 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  h4 {
+    font-size: 16px;
+    margin-top: 2px;
+  }
+}
+
+.ajout {
+  margin: 10px 0 0 10px;
+}
+
+.title_date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.show {
+  background: #778DA9;
+  border: none;
+  font-weight: bold !important;
+}

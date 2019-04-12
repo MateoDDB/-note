@@ -1,0 +1,8 @@
+<div class="page-show">
+  <h2>Titre : <%= @notem.title %></h2>
+  <p>Importance : <%= @notem.importance %></p>
+  <p>Date : <%= @notem.created_at.strftime("%F") %></p>
+  <p>Description : </p>
+  <p><%= @notem.description %></p>
+  <%= link_to "Modifier", edit_notem_path, class:"btn btn-primary" %>
+</div>

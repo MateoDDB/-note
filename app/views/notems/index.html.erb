@@ -1,0 +1,26 @@
+<%= link_to "Ajouter une Note", new_notem_path, class:"btn btn-primary ajout text-center" %>
+<% @notems.each do |note| %>
+  <div class="card">
+    <div class="title_date">
+      <h2>
+        <%= note.title %>
+      </h2>
+      <h4>
+        <%= note.created_at.strftime("%F") %>
+      </h4>
+    </div>
+    <h3>
+      <%= note.importance %>
+    </h3>
+      <% if note.description.size > 150 %>
+        <p>
+          <%= note.description[0..150] %>&hellip;
+        </p>
+      <% else %>
+        <p>
+          <%= note.description %>
+        </p>
+      <% end %>
+      <%= link_to "Voir", notem_path(note), class:"btn btn-primary show" %>
+  </div>
+<% end %>
