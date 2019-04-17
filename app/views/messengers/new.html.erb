@@ -1,0 +1,8 @@
+<div id="new_messenger">
+
+</div>
+
+<%= simple_form_for(@messenger, remote: true) do |form| %>
+  <%= form.input :content, as: :text %>
+  <%= form.button :submit, class:"btn btn-primary" %>
+<% end %>

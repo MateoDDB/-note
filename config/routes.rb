@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'notems#index'
-  resources :notems, only: [:index, :new, :create, :show, :edit]
+  resources :notems, only: [:index, :new, :create, :show, :edit, :update]
+  resources :messengers, only: [:new,:create]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

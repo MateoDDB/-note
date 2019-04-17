@@ -1,0 +1,18 @@
+// app/views/messengers/create.js.erb
+// Here you generate *JavaScript* that would be executed in the browser
+function refreshForm(innerHTML) {
+  const newMessengerForm = document.getElementById('new_messenger');
+  newMessengerForm.innerHTML = innerHTML;
+}
+
+// function addmessenger(messengerHTML) {
+//   const messengers = document.getElementById('messengers');
+//   messengers.insertAdjacentHTML('beforeend', messengerHTML);
+// }
+
+<% if @messenger.errors.any? %>
+  refreshForm('<%= j render "messengers/new"');
+<% else %>
+  addmessenger('<%= j render "messengers/show"');
+  refreshForm('<%= j render "messengers/form"');
+<% end %>

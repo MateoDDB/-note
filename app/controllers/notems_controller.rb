@@ -23,8 +23,8 @@ class NotemsController < ApplicationController
 
   def update
     @notem = Notem.find(params[:id])
-    if @notem.uptdate(notem_params)
-      render :show
+    if @notem.update(notem_params)
+      redirect_to notem_path(@notem)
     else
       render :edit
     end
